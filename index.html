@@ -2,44 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Rose Day 🌹</title>
+  <title>Rose Day Surprise</title>
   <style>
     body {
-      background: linear-gradient(to right, #ffdde1, #ee9ca7);
-      font-family: 'Segoe UI', sans-serif;
       text-align: center;
-      color: #4a2c2a;
-      margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('fireworks.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
     }
-    .container {
-      margin-top: 15%;
-    }
-    h1 {
-      font-size: 3em;
-      color: #b22222;
-    }
-    p {
-      font-size: 1.5em;
+    #rose, #proposal, #message {
+      display: none;
+      animation: fadeIn 2s;
       margin-top: 20px;
     }
-    .rose {
-      font-size: 5em;
-      animation: float 3s infinite;
+    #message {
+      font-size: 22px;
+      font-weight: bold;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+      background-color: rgba(0,0,0,0.5);
+      padding: 15px;
+      border-radius: 10px;
     }
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0); }
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      color: #ffccff;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #ff99cc;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="rose">🌹</div>
-    <h1>Happy Rose Day, My Love!</h1>
-    <p>You are the most beautiful flower in my garden of life.</p>
-    <p>Forever yours ❤️</p>
+  <h1>Happy Rose Day!</h1>
+  <p><a href="#" onclick="showSurprise()">Click here for a surprise 🌹</a></p>
+  
+  <!-- Hidden rose image -->
+  <img id="rose" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Rose_flower.jpg" alt="Rose" width="300">
+  
+  <!-- Hidden boy proposing animation -->
+  <img id="proposal" src="proposal.gif" alt="Boy proposing to girl" width="400">
+  
+  <!-- Hidden love message -->
+  <div id="message">
+    Chitti, I love you. 💖<br><br>
+    Before you, I never really felt love. Whenever someone talked about love, I used to say “don’t do it.”  
+    But after you came into my life, it feels like *nuvvunte chalu* (having you is enough).  
+    I miss you in a way I can’t explain, but it’s a deep feeling of love…  
+    Love you forever 🌹
   </div>
+  
+  <script>
+    function showSurprise() {
+      document.getElementById("rose").style.display = "block";
+      document.getElementById("proposal").style.display = "block";
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
 </body>
 </html>
